@@ -1,6 +1,6 @@
 from modules.arquivo import exportar_json, registrar_log
+from modules.colheita import produtividade_por_propriedade
 from modules.validacao import ler_decimal
-from modules.precos import obter_preco_mais_recente
 
 
 def produtividade_por_safra(repositorio, config: dict) -> None:
@@ -75,6 +75,25 @@ def custo_versus_receita(repositorio, config: dict) -> None:
         print("[OK] Margem saudavel para a safra analisada.")
 
 
+def produtividade_por_propriedade_relatorio(repositorio, config: dict) -> None:
+    totais = produtividade_por_propriedade(repositorio)
+    if not totais:
+        print("  > Nenhuma colheita registrada.")
+        return
+    propriedades = {int(p["id"]): p for p in repositorio.listar("propriedades")}
+    print("\n--- Produtividade por Propriedade ---")
+    print(f"{'ID':<4} {'Nome':<25} {'Municipio':<20} {'Kg Total':>12}")
+    print("-" * 65)
+    for propriedade_id, kg in sorted(totais.items(), key=lambda x: x[1], reverse=True):
+        propriedade = propriedades.get(propriedade_id)
+        nome = str(propriedade["nome"])[:25] if propriedade else "(removida)"
+        municipio = str(propriedade["municipio"])[:20] if propriedade else "-"
+        print(f"{propriedade_id:<4} {nome:<25} {municipio:<20} {kg:>12.2f}")
+    total_geral = sum(totais.values())
+    print("-" * 65)
+    print(f"{'TOTAL':<51} {total_geral:>12.2f}")
+
+
 def exportar_dados_completos(repositorio, config: dict) -> None:
     caminho = config["arquivos"]["exportacao_json"]
     conteudo = {
@@ -103,5 +122,6 @@ def agrupar_kg_por_ano(colheitas: list[dict]) -> dict[str, dict]:
 
 def obter_preco_referencia(precos: list[dict], config: dict) -> float:
     if precos:
-        return obter_preco_mais_recente(precos)
+        valores = [float(p["preco_kg"]) for p in precos]
+        return sum(valores) / len(valores)
     return float(config["precos"]["medio_produtor_2025_kg"])

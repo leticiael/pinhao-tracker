@@ -48,5 +48,11 @@
     "user": "system",
     "password": "oracle",
     "dsn": "localhost:1521/XEPDB1"
+  },
+  "api_clima": {
+    "habilitada": true,
+    "url_base": "https://archive-api.open-meteo.com/v1/archive",
+    "timeout_segundos": 15,
+    "atribuicao": "Dados climaticos de Open-Meteo (open-meteo.com) - licenca CC BY 4.0"
   }
 }

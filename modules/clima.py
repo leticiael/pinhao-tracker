@@ -1,4 +1,6 @@
+from modules.api_clima import APIClimaIndisponivel, buscar_clima_diario
 from modules.arquivo import importar_txt_clima, registrar_log
+from modules.propriedade import listar_propriedades
 from modules.validacao import (
     formatar_data,
     ler_data,
@@ -8,12 +10,19 @@ from modules.validacao import (
 )
 
 
+COORDENADAS_REFERENCIA = (
+    ("Quatro Barras", -25.3676, -49.0775),
+    ("Campina Grande do Sul", -25.3056, -49.0572),
+)
+
+
 def registrar_clima_manual(repositorio, config: dict) -> None:
     print("\n--- Registro Climatico Manual ---")
     if not repositorio.listar("propriedades"):
         print("  > Cadastre uma propriedade antes.")
         return
 
+    listar_propriedades(repositorio, config)
     propriedade_id = ler_inteiro("ID da propriedade", minimo=1)
     if repositorio.buscar_por_id("propriedades", propriedade_id) is None:
         print("  > Propriedade nao encontrada.")
@@ -53,6 +62,7 @@ def importar_clima_de_arquivo(repositorio, config: dict) -> None:
     if not repositorio.listar("propriedades"):
         print("  > Cadastre uma propriedade antes.")
         return
+    listar_propriedades(repositorio, config)
     propriedade_id = ler_inteiro("ID da propriedade para vincular os registros", minimo=1)
     if repositorio.buscar_por_id("propriedades", propriedade_id) is None:
         print("  > Propriedade nao encontrada.")
@@ -85,6 +95,70 @@ def importar_clima_de_arquivo(repositorio, config: dict) -> None:
         f"Importacao clima propriedade={propriedade_id} arquivo='{caminho}' registros={importados}",
     )
     print(f"Importacao concluida: {importados} registro(s).")
+
+
+def importar_clima_da_api(repositorio, config: dict) -> None:
+    api_cfg = config.get("api_clima", {})
+    if not api_cfg.get("habilitada", False):
+        print("  > Recurso desativado. Ative em config.json -> api_clima.habilitada.")
+        return
+    print("\n--- Importacao Automatica de Clima (API Open-Meteo) ---")
+    print(f"Fonte: {api_cfg.get('atribuicao', 'Open-Meteo')}")
+    if not repositorio.listar("propriedades"):
+        print("  > Cadastre uma propriedade antes.")
+        return
+    listar_propriedades(repositorio, config)
+    propriedade_id = ler_inteiro("ID da propriedade", minimo=1)
+    if repositorio.buscar_por_id("propriedades", propriedade_id) is None:
+        print("  > Propriedade nao encontrada.")
+        return
+
+    print("Coordenadas de referencia da regiao-alvo:")
+    for nome, lat, lon in COORDENADAS_REFERENCIA:
+        print(f"  - {nome}: latitude {lat}, longitude {lon}")
+    latitude = ler_decimal("Latitude (graus decimais)", minimo=-90.0, maximo=90.0)
+    longitude = ler_decimal("Longitude (graus decimais)", minimo=-180.0, maximo=180.0)
+    data_inicio = ler_data("Data inicial")
+    data_fim = ler_data("Data final")
+    if data_fim < data_inicio:
+        print("  > Data final anterior a inicial. Operacao cancelada.")
+        return
+
+    try:
+        registros = buscar_clima_diario(
+            latitude=latitude,
+            longitude=longitude,
+            data_inicio=data_inicio,
+            data_fim=data_fim,
+            url_base=api_cfg["url_base"],
+            timeout_segundos=int(api_cfg.get("timeout_segundos", 15)),
+        )
+    except APIClimaIndisponivel as erro:
+        print(f"  > {erro}")
+        print("  > Alternativa: use 'Importar clima de arquivo .txt'.")
+        return
+
+    if not registros:
+        print("  > Nenhum registro retornado para o periodo informado.")
+        return
+
+    importados = 0
+    for reg in registros:
+        reg["propriedade_id"] = propriedade_id
+        try:
+            repositorio.inserir("registros_climaticos", reg)
+            importados += 1
+        except RuntimeError as erro:
+            print(f"  > Falha ao inserir: {erro}")
+
+    registrar_log(
+        config["arquivos"]["log_operacoes"],
+        f"Importacao API clima propriedade={propriedade_id} "
+        f"lat={latitude} lon={longitude} "
+        f"periodo={data_inicio.isoformat()}/{data_fim.isoformat()} "
+        f"registros={importados}",
+    )
+    print(f"Importacao concluida: {importados} dia(s) baixado(s) da Open-Meteo.")
 
 
 def listar_registros_climaticos(repositorio, config: dict) -> None:

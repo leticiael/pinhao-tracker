@@ -1,5 +1,6 @@
 from modules.armazenamento import registrar_armazenamento, verificar_vencimentos
 from modules.clima import (
+    importar_clima_da_api,
     importar_clima_de_arquivo,
     listar_registros_climaticos,
     registrar_clima_manual,
@@ -17,6 +18,7 @@ from modules.relatorios import (
     comparativo_entre_anos,
     custo_versus_receita,
     exportar_dados_completos,
+    produtividade_por_propriedade_relatorio,
     produtividade_por_safra,
 )
 from modules.validacao import ler_opcao_menu
@@ -78,7 +80,8 @@ def submenu_clima(repositorio, config: dict) -> None:
     opcoes = {
         "1": ("Registrar clima manualmente", registrar_clima_manual),
         "2": ("Importar clima de arquivo .txt", importar_clima_de_arquivo),
-        "3": ("Listar registros climaticos", listar_registros_climaticos),
+        "3": ("Importar clima da API Open-Meteo (extra)", importar_clima_da_api),
+        "4": ("Listar registros climaticos", listar_registros_climaticos),
     }
     executar_submenu("Monitoramento Climatico", opcoes, repositorio, config)
 
@@ -103,8 +106,9 @@ def submenu_precos(repositorio, config: dict) -> None:
 def submenu_relatorios(repositorio, config: dict) -> None:
     opcoes = {
         "1": ("Produtividade por safra", produtividade_por_safra),
-        "2": ("Comparativo entre anos", comparativo_entre_anos),
-        "3": ("Custo vs Receita", custo_versus_receita),
+        "2": ("Produtividade por propriedade", produtividade_por_propriedade_relatorio),
+        "3": ("Comparativo entre anos", comparativo_entre_anos),
+        "4": ("Custo vs Receita", custo_versus_receita),
     }
     executar_submenu("Relatorios", opcoes, repositorio, config)
 

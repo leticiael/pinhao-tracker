@@ -1,6 +1,7 @@
 from datetime import date
 
 from modules.arquivo import registrar_log
+from modules.propriedade import listar_propriedades
 from modules.validacao import (
     formatar_data,
     ler_data,
@@ -18,6 +19,7 @@ def registrar_colheita(repositorio, config: dict) -> None:
         print("  > Cadastre uma propriedade antes de registrar colheitas.")
         return
 
+    listar_propriedades(repositorio, config)
     propriedade_id = ler_inteiro("ID da propriedade", minimo=1)
     if repositorio.buscar_por_id("propriedades", propriedade_id) is None:
         print("  > Propriedade nao encontrada.")

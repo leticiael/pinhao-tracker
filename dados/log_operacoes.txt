@@ -1,1 +1,6 @@
 [2026-04-20 10:32:23] Sistema iniciado
+[2026-04-20 11:29:38] Sistema encerrado
+[2026-04-20 11:29:40] Sistema iniciado
+[2026-04-20 11:29:58] Exportacao JSON gerada em dados/exportacao.json
+[2026-04-20 11:39:54] Sistema encerrado
+[2026-04-20 11:39:56] Sistema iniciado

@@ -2,16 +2,42 @@
 
 Sistema de gestão da produção de pinhão (semente da *Araucaria angustifolia*) para pequenos produtores da região de **Campina Grande do Sul** e **Quatro Barras**, no Paraná. Projeto acadêmico FIAP 2026.
 
-## O problema do agronegócio
+## Por que esse projeto existe
+
+Eu nasci e cresci na região de Quatro Barras, no Primeiro Planalto Paranaense. É uma região onde, se você sobe por qualquer estrada de terra, vê araucária até onde a vista alcança — e vê, também, famílias inteiras que dependem da terra. A agricultura familiar não é um detalhe econômico por aqui: é o sustento real de quem planta hortaliça, cria galinha, faz farinha de milho no moinho de pedra e, todo outono, sai com saco nas costas para bater pinhão.
+
+Todo mundo que é daqui conhece alguém que vive da roça. O pinhão, em particular, é uma renda sazonal que muitas famílias esperam o ano inteiro: chega em abril, vai até junho, e o que entra nesses dois meses e meio costuma cobrir coisa que não fecha durante o ano — conserto de telhado, remédio, material escolar dos filhos. É uma economia que não aparece no noticiário, mas que movimenta as feiras de Morretes, Piraquara, Campina Grande do Sul e Quatro Barras, e que sustenta a Rota do Pinhão, um dos poucos circuitos turísticos rurais do estado que realmente põe dinheiro no bolso de quem produz.
+
+O problema é que, do lado de quem colhe, quase tudo ainda é feito no caderno. Anotar no caderno, quando se anota, virou hábito e não análise. Eu já vi produtor querendo saber quantos quilos tirou na safra passada e abrir três cadernos diferentes procurando uma linha específica. Já vi gente vendendo o saco no primeiro atravessador que aparece, em maio, por medo de ficar com o produto estragando em casa — e duas semanas depois o preço sobe 40%. Já vi pinhão estragar em porão porque ninguém lembrava quando tinha guardado. E já vi muita colheita fora de período, sem registro, sem controle de EPI, virando multa ou acidente.
+
+Este sistema não resolve o preço, o clima, nem a idade das árvores. Mas resolve o que está na mão do produtor: **saber o que foi produzido, quando, em que condição, por quanto, e o que ainda está em estoque**. É disso que nasce poder de barganha. E é por isso que, ao invés de fazer um projeto genérico de "controle de produção agrícola", escolhi fazer um projeto específico para o pinhão, para a minha região, com os números reais da legislação do IAT, da PGPM-Bio e da realidade da Cooperativa Nascente.
+
+## O pinhão em números
+
+A narrativa acima é pessoal, mas o peso dela está nos dados públicos. Os principais:
+
+- **Árvore criticamente ameaçada.** A *Araucaria angustifolia* é classificada como **criticamente ameaçada de extinção** pela IUCN (União Internacional para a Conservação da Natureza). Da Floresta com Araucárias original — estimada em cerca de **20 milhões de hectares** — restam hoje **menos de 3%** no Brasil. No Paraná, a situação é ainda mais dramática: sobra **menos de 0,4%** dos 8 milhões de hectares nativos originais. Cada árvore que ainda frutifica é uma sobrevivente estatística.
+
+- **Paraná é o maior produtor nacional em valor.** Segundo a **Pesquisa de Produção da Extração Vegetal e da Silvicultura (PEVS/IBGE) de 2023**, o Paraná respondeu por **43,3% do valor de produção de pinhão do Brasil** — R$ 26,8 milhões dos R$ 61,9 milhões nacionais. Em volume, o estado disputa o primeiro lugar ano a ano com Minas Gerais: foi **38,5% do volume nacional em 2021** e 32,9% em 2023 (contra 33,8% de MG).
+
+- **Tudo é extrativismo, nada é silvicultura.** O IBGE classifica a produção oficial de pinhão como **extração vegetal**, não silvicultura. Isso quer dizer que o volume sai de **árvores nativas em pé**, não de plantio comercial. Por isso a cadeia está estruturalmente nas mãos de famílias que vivem próximo a remanescentes de Floresta com Araucárias — o perfil exato do produtor que este sistema pretende servir.
+
+- **Um terço da renda anual em 75 dias.** Reportagem da Secretaria do Desenvolvimento Sustentável do Paraná documenta o caso de **Elizabeth Guedes de Freitas Costa, produtora de Campina Grande do Sul** — exatamente uma das duas cidades-alvo deste projeto. Para a família dela, o pinhão representa **um terço da renda do ano inteiro**, concentrado nos cerca de **75 dias** da janela legal de safra (15/04 a 30/06, IAT nº 03/2026). Fora dessa janela, são mais de 80% do ano sem receita direta dessa cadeia.
+
+- **Pequeno no agregado nacional, grande na região.** No conjunto dos produtos não-madeireiros do extrativismo brasileiro, o pinhão representa cerca de **3,3% do valor** — muito atrás do açaí (46%) e da erva-mate (31,8%). O número parece pouco porque é um mapa de distribuição: a cadeia do pinhão é **concentrada** em poucos estados e, dentro do Paraná, em poucas microrregiões, das quais a Rota do Pinhão (que inclui Campina Grande do Sul e Quatro Barras) é a principal.
+
+Esse quadro explica por que um sistema simples de gestão faz diferença aqui: uma cadeia concentrada, com janela curta, totalmente extrativista e em árvore criticamente ameaçada — cada quilo registrado importa, tanto para a renda familiar quanto para a rastreabilidade ambiental.
+
+## O problema, em termos práticos
 
 Pequenos produtores extrativistas de pinhão do Primeiro Planalto Paranaense operam, em sua maioria, sem nenhum tipo de controle sistemático da produção. Toda a gestão é feita em cadernos, papéis avulsos ou na memória, o que gera quatro consequências diretas e recorrentes:
 
-1. **Desconhecimento da produtividade real por safra.** Sem registrar kg colhidos por dia e por propriedade, o produtor não consegue avaliar se sua produção melhorou, estagnou ou caiu ao longo dos anos.
-2. **Ausência de histórico climático.** A produção da araucária é altamente sensível a temperatura, umidade e regime de chuvas. Sem um histórico climático atrelado aos registros de colheita, é impossível correlacionar variações anuais de produtividade a condições meteorológicas.
-3. **Venda no momento errado.** O preço do pinhão oscila fortemente dentro da própria safra (15 de abril a 30 de junho, conforme a Instrução Normativa IAT nº 03/2026). Sem histórico de preços, o produtor vende no primeiro comprador que aparece — geralmente atravessadores — perdendo margem.
-4. **Perdas pós-colheita.** Pinhão é altamente perecível. Armazenado a granel, dura cerca de 30 dias; a vácuo refrigerado, até 120 dias; e congelado, até 210 dias. Sem controle do método e da data de entrada em estoque, produtos vencem dentro do armazém e viram prejuízo.
+1. **Desconhecimento da produtividade real por safra.** Sem registrar kg colhidos por dia e por propriedade, o produtor não consegue avaliar se sua produção melhorou, estagnou ou caiu ao longo dos anos — e, portanto, não consegue negociar com cooperativa nem pleitear crédito rural com base em histórico.
+2. **Ausência de histórico climático.** A produção da araucária é altamente sensível a temperatura, umidade e regime de chuvas. Uma safra fraca pode ser culpa de uma geada tardia ou de um outono muito seco, mas sem dados atrelados não há como saber — e não há como se planejar para o ano seguinte.
+3. **Venda no momento errado.** O preço do pinhão oscila fortemente dentro da própria safra. Sem histórico de preços comparado à média, o produtor vende para o primeiro comprador que aparece, tipicamente um atravessador que passa na porteira em maio. Em muitos casos, esperar duas ou três semanas significaria 30–40% a mais no quilo.
+4. **Perdas pós-colheita.** Pinhão é altamente perecível. Armazenado a granel, dura cerca de 30 dias; a vácuo refrigerado, até 120 dias; e congelado, até 210 dias. Sem controle do método e da data de entrada em estoque, produto vence dentro do armazém e vira prejuízo puro.
 
-O **Pinhão Tracker** resolve essas quatro dores com cadastros estruturados, alertas automáticos e relatórios comparativos entre safras.
+O **Pinhão Tracker** resolve essas quatro dores com cadastros estruturados, alertas automáticos de vencimento, validação do período oficial de safra e relatórios comparativos entre anos.
 
 ## Por que Campina Grande do Sul e Quatro Barras
 
@@ -21,7 +47,7 @@ Os dois municípios estão no coração da **Rota do Pinhão**, circuito turíst
 - **Temperatura média anual entre 15 °C e 25 °C**, dentro da faixa ótima para a espécie.
 - **Cooperativismo ativo**, com destaque para a **Cooperativa Nascente**, que agrega pequenos produtores extrativistas e reforça o papel do pinhão como fonte complementar de renda em propriedades familiares.
 
-O extrativismo do pinhão é, nessas duas cidades, uma renda sazonal relevante em propriedades que combinam agricultura familiar, turismo rural e produção de erva-mate. Uma ferramenta simples de gestão aumenta o poder de barganha do produtor e ajuda a preservar a araucária, espécie criticamente ameaçada de extinção.
+O extrativismo do pinhão é, nessas duas cidades, uma renda sazonal relevante em propriedades que combinam agricultura familiar, turismo rural e produção de erva-mate. Uma ferramenta simples de gestão aumenta o poder de barganha do produtor, reduz perdas e ajuda a preservar a araucária, espécie criticamente ameaçada de extinção. Preservar a árvore é preservar quem vive dela.
 
 ## Solução proposta
 
@@ -104,6 +130,50 @@ DD/MM/AAAA;temperatura;umidade;precipitacao
 
 Linhas iniciadas por `#` são tratadas como comentário e ignoradas.
 
+## Recurso extra: importação automática via API Open-Meteo
+
+Além da importação por arquivo `.txt` (que cumpre integralmente o requisito de manipulação de `.txt`), o sistema oferece como **recurso opcional** a importação automática de histórico climático via **API pública da Open-Meteo** (serviço gratuito de dados meteorológicos, sem necessidade de chave de acesso).
+
+### Por que esse extra existe
+
+O produtor raramente tem estação meteorológica própria. Digitar clima dia a dia é inviável, e nem sempre há arquivo `.txt` pronto. Puxar o histórico da Open-Meteo por coordenada geográfica cobre essa lacuna e fecha o ciclo da segunda dor descrita no início deste documento (ausência de histórico climático atrelado à safra).
+
+### Como funciona
+
+1. No menu principal, entre em **3. Monitoramento Climatico**.
+2. Escolha **3. Importar clima da API Open-Meteo (extra)**.
+3. O sistema lista as propriedades cadastradas e pede o ID da propriedade-destino.
+4. Exibe coordenadas de referência da região-alvo (Quatro Barras e Campina Grande do Sul) e pede latitude e longitude em graus decimais.
+5. Pede data inicial e data final do período desejado.
+6. Baixa temperatura média diária, umidade relativa média diária e precipitação total diária da API e grava na tabela `registros_climaticos` vinculada à propriedade.
+
+### Sem bibliotecas externas adicionais
+
+A integração usa apenas `urllib.request` e `json`, ambos da **biblioteca padrão do Python**. Nenhuma dependência a mais em relação ao projeto base — o requisito de usar apenas `oracledb` como biblioteca externa continua atendido.
+
+### Fallback gracioso
+
+Se a rede estiver indisponível, a API estiver fora do ar, ou o tempo limite for excedido, o sistema exibe mensagem clara e sugere a alternativa por arquivo `.txt`. Nenhum registro parcial é gravado em caso de falha de comunicação.
+
+### Como desativar
+
+Em `config.json`, no bloco `api_clima`, troque `"habilitada": true` para `"habilitada": false`. A opção some na prática: ao ser chamada, informa que o recurso está desativado e retorna ao menu.
+
+### Atribuição
+
+Os dados vêm do serviço **Open-Meteo** (<https://open-meteo.com>), sob licença **Creative Commons Attribution 4.0 (CC BY 4.0)**. A atribuição é exibida na tela do terminal toda vez que o recurso é utilizado.
+
+### Configuração
+
+```json
+"api_clima": {
+  "habilitada": true,
+  "url_base": "https://archive-api.open-meteo.com/v1/archive",
+  "timeout_segundos": 15,
+  "atribuicao": "Dados climaticos de Open-Meteo (open-meteo.com) - licenca CC BY 4.0"
+}
+```
+
 ## Estrutura do projeto
 
 ```
@@ -119,6 +189,7 @@ pinhao-tracker/
 │   └── log_operacoes.txt        # Gerado em tempo de execução
 └── modules/
     ├── __init__.py
+    ├── api_clima.py             # Cliente HTTP Open-Meteo (recurso extra)
     ├── arquivo.py               # I/O de .txt e .json
     ├── armazenamento.py         # Controle pós-colheita
     ├── clima.py                 # Monitoramento climático
@@ -139,3 +210,12 @@ pinhao-tracker/
 ## Repositório
 
 GitHub: [leticiael/pinhao-tracker](https://github.com/leticiael/pinhao-tracker)
+
+## Fontes dos dados citados
+
+- **Produção da Extração Vegetal e da Silvicultura (PEVS)** — IBGE, edições 2021 e 2023. Fornece volume, valor de produção e ranking estadual do pinhão: <https://www.ibge.gov.br/estatisticas/economicas/agricultura-e-pecuaria/9105-producao-da-extracao-vegetal-e-da-silvicultura.html>
+- **Pinhão e renda sazonal de pequenos produtores (caso Campina Grande do Sul)** — Secretaria do Desenvolvimento Sustentável do Paraná: <https://www.sedest.pr.gov.br/Noticia/No-Parana-pinhao-gera-renda-para-pequenos-produtores>
+- **Status de conservação da *Araucaria angustifolia*** — União Internacional para a Conservação da Natureza (IUCN) Red List; Fundação Grupo Boticário: <https://fundacaogrupoboticario.org.br/ameacada-floresta-com-araucarias-ainda-e-motivo-de-preocupacao/>
+- **Remanescentes da Floresta com Araucárias no Paraná** — cobertura de aproximadamente 0,4% da área original, reportagem da Mongabay Brasil: <https://brasil.mongabay.com/2022/03/araucarias-em-rota-de-extincao-sao-cortadas-com-aval-dos-orgaos-publicos/>
+- **Instrução Normativa IAT nº 03/2026** — Instituto Água e Terra (Paraná), período oficial de coleta do pinhão: 15 de abril a 30 de junho.
+- **Política de Garantia de Preços Mínimos para produtos da Sociobiodiversidade (PGPM-Bio)** — Conab / Ministério da Agricultura. Preço mínimo do pinhão: R$ 3,66/kg.
