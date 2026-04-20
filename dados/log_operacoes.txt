@@ -4,3 +4,18 @@
 [2026-04-20 11:29:58] Exportacao JSON gerada em dados/exportacao.json
 [2026-04-20 11:39:54] Sistema encerrado
 [2026-04-20 11:39:56] Sistema iniciado
+[2026-04-20 11:51:22] Propriedade cadastrada id=1 nome='Sitio Pinheiro Bravo' municipio='Quatro Barras'
+[2026-04-20 11:52:06] Sistema encerrado
+[2026-04-20 11:52:08] Sistema iniciado
+[2026-04-20 11:53:05] Colheita id=1 propriedade=1 data=2026-07-10 kg=50.0
+[2026-04-20 11:54:23] Sistema encerrado
+[2026-04-20 11:54:26] Sistema iniciado
+[2026-04-20 11:54:59] Armazenamento id=1 propriedade=1 kg=40.0 metodo=granel venc=2026-04-09
+[2026-04-20 11:55:57] Armazenamento id=2 propriedade=1 kg=30.0 metodo=vacuo venc=2026-04-25
+[2026-04-20 11:56:21] Armazenamento id=3 propriedade=1 kg=50.0 metodo=congelado venc=2026-11-16
+[2026-04-20 11:57:37] Sistema encerrado
+[2026-04-20 11:57:53] Sistema iniciado
+[2026-04-20 11:58:30] Preco id=1 data=2026-04-01 preco=5.5 regiao='CGS/PR'
+[2026-04-20 11:58:58] Preco id=2 data=2026-04-15 preco=7.2 regiao='CGS/PR'
+[2026-04-20 12:00:45] Preco id=3 data=2026-04-20 preco=8.0 regiao='curtiba Mercado'
+[2026-04-20 12:02:59] Importacao API clima propriedade=1 lat=-25.3676 lon=-49.0775 periodo=2026-04-15/2026-04-20 registros=6

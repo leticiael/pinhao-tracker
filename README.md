@@ -126,7 +126,9 @@ Sem Oracle configurado, o sistema usa `dados/dados.json` como armazenamento.
 python main.py
 ```
 
-O menu principal será exibido. Todas as operações são acessadas por submenus numerados.
+O menu principal é exibido ao iniciar. Todas as operações são acessadas por submenus numerados, e o cabeçalho indica a versão do sistema, o ano da safra, a região-alvo e o **modo de armazenamento ativo** (ORACLE ou JSON — JSON é o padrão quando o Oracle não está disponível).
+
+![Menu principal do Pinhão Tracker executando em modo JSON](docs/imagens/menuprincipal.png)
 
 ### Importação de clima a partir de `.txt`
 
@@ -156,6 +158,8 @@ O produtor raramente tem estação meteorológica própria. Digitar clima dia a 
 5. Pede data inicial e data final do período desejado.
 6. Baixa temperatura média diária, umidade relativa média diária e precipitação total diária da API e grava na tabela `registros_climaticos` vinculada à propriedade.
 
+![Execução da importação automática de clima pela API Open-Meteo](docs/imagens/importacaoapi.png)
+
 ### Sem bibliotecas externas adicionais
 
 A integração usa apenas `urllib.request` e `json`, ambos da **biblioteca padrão do Python**. Nenhuma dependência a mais em relação ao projeto base — o requisito de usar apenas `oracledb` como biblioteca externa continua atendido.
@@ -182,6 +186,39 @@ Os dados vêm do serviço **Open-Meteo** (<https://open-meteo.com>), sob licenç
   "atribuicao": "Dados climaticos de Open-Meteo (open-meteo.com) - licenca CC BY 4.0"
 }
 ```
+
+## Capturas de tela
+
+Esta seção reúne registros do sistema em execução — todas capturadas direto do terminal, com dados-exemplo coerentes com o cenário descrito ao longo do README.
+
+### Cadastro de propriedade com validação de altitude
+
+![Cadastro de propriedade com validação de altitude ideal para araucária](docs/imagens/registropropriedade.png)
+
+Ao cadastrar uma propriedade, o sistema valida toda entrada (nome, município, área em hectares, altitude em metros, nome do produtor) e, logo após gravar o registro, compara a altitude informada com o mínimo ideal para araucária produtiva configurado em `config.json` (800 m). Acima desse valor, exibe `[OK] Altitude adequada para a cultura da araucaria`; abaixo, dispara `[ALERTA]` sinalizando que a região pode não ser ideal para a espécie. É um exemplo de **validação semântica** — não basta o dado ter o tipo correto, ele precisa fazer sentido agronômico.
+
+### Registro de colheita fora do período legal
+
+![Registro de colheita fora do período oficial de safra, com cálculo automático de multa e alerta de segurança por escalada sem EPI](docs/imagens/colheitaforadoperiodo.png)
+
+Este é o ponto mais rico do sistema em termos de regras de negócio. Ao receber uma colheita com data fora da janela oficial (15/04 a 30/06, conforme IAT nº 03/2026), o sistema:
+1. Dispara `[ALERTA]` de colheita fora do período oficial, citando a base legal.
+2. Calcula automaticamente a **multa mínima estimada**, aplicando R$ 300,00 por faixa de 50 kg apreendidos, conforme a legislação estadual.
+3. Avalia em paralelo as condições de segurança da colheita: quando o método é **escalada sem EPI**, emite um segundo alerta — `[ALERTA SEGURANCA] Coleta por escalada sem EPI representa risco grave de queda.`
+
+Três validações independentes (legal, financeira e de segurança) acionadas numa única operação.
+
+### Painel de armazenamento com totalização de perdas
+
+![Painel de vencimentos com resumo de lotes OK, em alerta e vencidos, com taxa de perda calculada em percentual](docs/imagens/painelvencimentos.png)
+
+Painel que ataca a quarta dor descrita na abertura do README — perdas pós-colheita. Cada lote aparece com data de entrada, vencimento calculado automaticamente conforme o método (granel ≈ 30 dias, vácuo refrigerado ≈ 120 dias, congelado ≈ 210 dias) e dias restantes até vencer. O rodapé totaliza as três classificações, calcula a **taxa de perda em percentual** sobre o total armazenado e, quando a perda passa de 5%, dispara um `[ALERTA]` sugerindo revisão do método de armazenamento e do giro de estoque. Transforma um simples registro em métrica de gestão.
+
+### Análise de momento de venda
+
+![Análise de momento de venda comparando preço atual com média histórica e preço mínimo federal PGPM-Bio](docs/imagens/analsiemomentodavenda.png)
+
+O sistema lê o histórico de preços registrados pelo produtor e gera um quadro com seis indicadores comparativos: preço mais recente, média histórica, mínimo e máximo registrados, preço mínimo federal PGPM-Bio (R$ 3,66/kg) e referência de 2025 da Serra Catarinense (R$ 6,44/kg). A partir desses dados e dos limiares configurados (5% acima da média = favorável, 5% abaixo = desfavorável), o sistema retorna uma recomendação objetiva — **VENDER AGORA**, **AGUARDAR** ou **NEUTRO** — com a justificativa explícita. Resolve a terceira dor: venda no momento errado por falta de referência de preço comparável.
 
 ## Estrutura do projeto
 

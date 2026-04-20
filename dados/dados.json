@@ -1,8 +1,120 @@
 {
-  "propriedades": [],
+  "propriedades": [
+    {
+      "id": 1,
+      "nome": "Sitio Pinheiro Bravo",
+      "municipio": "Quatro Barras",
+      "area_hectares": 12.5,
+      "altitude_metros": 920.0,
+      "produtor": "Joao da silva",
+      "data_cadastro": "2026-04-20"
+    }
+  ],
   "arvores": [],
-  "colheitas": [],
-  "registros_climaticos": [],
-  "armazenamentos": [],
-  "precos": []
+  "colheitas": [
+    {
+      "id": 1,
+      "propriedade_id": 1,
+      "data_colheita": "2026-07-10",
+      "kg_coletados": 50.0,
+      "metodo": "escalada",
+      "uso_epi": "N"
+    }
+  ],
+  "registros_climaticos": [
+    {
+      "id": 1,
+      "data_registro": "2026-04-15",
+      "temperatura_celsius": 17.6,
+      "umidade_percentual": 88.0,
+      "precipitacao_mm": 0.3,
+      "propriedade_id": 1
+    },
+    {
+      "id": 2,
+      "data_registro": "2026-04-16",
+      "temperatura_celsius": 18.7,
+      "umidade_percentual": 84.0,
+      "precipitacao_mm": 0.0,
+      "propriedade_id": 1
+    },
+    {
+      "id": 3,
+      "data_registro": "2026-04-17",
+      "temperatura_celsius": 20.0,
+      "umidade_percentual": 81.0,
+      "precipitacao_mm": 6.4,
+      "propriedade_id": 1
+    },
+    {
+      "id": 4,
+      "data_registro": "2026-04-18",
+      "temperatura_celsius": 19.5,
+      "umidade_percentual": 79.0,
+      "precipitacao_mm": 0.0,
+      "propriedade_id": 1
+    },
+    {
+      "id": 5,
+      "data_registro": "2026-04-19",
+      "temperatura_celsius": 19.5,
+      "umidade_percentual": 84.0,
+      "precipitacao_mm": 0.0,
+      "propriedade_id": 1
+    },
+    {
+      "id": 6,
+      "data_registro": "2026-04-20",
+      "temperatura_celsius": 18.3,
+      "umidade_percentual": 85.0,
+      "precipitacao_mm": 0.0,
+      "propriedade_id": 1
+    }
+  ],
+  "armazenamentos": [
+    {
+      "id": 1,
+      "propriedade_id": 1,
+      "kg_armazenados": 40.0,
+      "metodo": "granel",
+      "data_entrada": "2026-03-10",
+      "prazo_dias": 30
+    },
+    {
+      "id": 2,
+      "propriedade_id": 1,
+      "kg_armazenados": 30.0,
+      "metodo": "vacuo",
+      "data_entrada": "2025-12-26",
+      "prazo_dias": 120
+    },
+    {
+      "id": 3,
+      "propriedade_id": 1,
+      "kg_armazenados": 50.0,
+      "metodo": "congelado",
+      "data_entrada": "2026-04-20",
+      "prazo_dias": 210
+    }
+  ],
+  "precos": [
+    {
+      "id": 1,
+      "data_registro": "2026-04-01",
+      "preco_kg": 5.5,
+      "regiao": "CGS/PR"
+    },
+    {
+      "id": 2,
+      "data_registro": "2026-04-15",
+      "preco_kg": 7.2,
+      "regiao": "CGS/PR"
+    },
+    {
+      "id": 3,
+      "data_registro": "2026-04-20",
+      "preco_kg": 8.0,
+      "regiao": "curtiba Mercado"
+    }
+  ]
 }
