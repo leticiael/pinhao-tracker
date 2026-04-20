@@ -90,7 +90,8 @@ O Pinhão Tracker é um sistema de terminal, escrito em Python 3.12+, que oferec
 ## Requisitos técnicos atendidos
 
 - **Subalgoritmos**: todas as funcionalidades estão organizadas em funções com passagem de parâmetros.
-- **Estruturas de dados**: uso de **listas** (coleções de registros), **tuplas** (opções imutáveis de menu, faixas etárias) e **dicionários** (configuração, registros individuais, agregações).
+- **Estruturas de dados**: uso de **listas** (coleções de registros retornadas pelo repositório), **tuplas** (opções imutáveis de menu, faixas etárias produtivas, métodos de armazenamento, coordenadas de referência das cidades-alvo) e **dicionários** (arquivo de configuração, registros individuais representando linhas, agregações como `totais_por_ano`).
+- **Tabela em memória**: as importações em lote de clima — tanto por arquivo `.txt` quanto pela API Open-Meteo — constroem uma **lista de dicionários simulando uma tabela do banco**. Essa tabela em memória é **manipulada** (adição do campo `propriedade_id` em cada linha) e **resumida** em um preview (`exibir_resumo_tabela_memoria` em `modules/clima.py`) para revisão pelo usuário **antes de ser persistida** no Oracle ou no JSON. O produtor confirma ou aborta a gravação com base nas estatísticas agregadas do preview (total de registros, período, faixa de temperatura, umidade e precipitação).
 - **Manipulação de arquivos**: `.txt` para log de operações e importação de clima; `.json` para configuração e exportação.
 - **Banco de dados Oracle** via biblioteca `oracledb`, com **fallback gracioso para JSON** caso o servidor não esteja disponível ou as tabelas não estejam criadas.
 
@@ -219,6 +220,12 @@ Painel que ataca a quarta dor descrita na abertura do README — perdas pós-col
 ![Análise de momento de venda comparando preço atual com média histórica e preço mínimo federal PGPM-Bio](docs/imagens/analsiemomentodavenda.png)
 
 O sistema lê o histórico de preços registrados pelo produtor e gera um quadro com seis indicadores comparativos: preço mais recente, média histórica, mínimo e máximo registrados, preço mínimo federal PGPM-Bio (R$ 3,66/kg) e referência de 2025 da Serra Catarinense (R$ 6,44/kg). A partir desses dados e dos limiares configurados (5% acima da média = favorável, 5% abaixo = desfavorável), o sistema retorna uma recomendação objetiva — **VENDER AGORA**, **AGUARDAR** ou **NEUTRO** — com a justificativa explícita. Resolve a terceira dor: venda no momento errado por falta de referência de preço comparável.
+
+### Preview da tabela em memória (importação em lote)
+
+![Preview de tabela em memória com estatísticas agregadas da importação antes de persistir no banco](docs/imagens/previewtabelamemoria.png)
+
+Demonstração do requisito de **tabela em memória**: ao importar clima (por arquivo `.txt` ou via API Open-Meteo), o sistema monta uma `list[dict]` representando as linhas da tabela `registros_climaticos`, manipula esse conjunto adicionando o `propriedade_id` a cada linha e, **antes de persistir no Oracle ou no JSON**, exibe um resumo agregado — total de registros, período, faixas de temperatura, umidade e precipitação. O produtor só efetiva a gravação se confirmar o preview; caso contrário, a operação é abortada sem nenhuma inserção. Essa etapa torna visível ao usuário o padrão "construir em memória → revisar → persistir" que até então ficava implícito no código.
 
 ## Estrutura do projeto
 

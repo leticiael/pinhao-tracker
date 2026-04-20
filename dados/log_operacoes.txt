@@ -19,3 +19,5 @@
 [2026-04-20 11:58:58] Preco id=2 data=2026-04-15 preco=7.2 regiao='CGS/PR'
 [2026-04-20 12:00:45] Preco id=3 data=2026-04-20 preco=8.0 regiao='curtiba Mercado'
 [2026-04-20 12:02:59] Importacao API clima propriedade=1 lat=-25.3676 lon=-49.0775 periodo=2026-04-15/2026-04-20 registros=6
+[2026-04-20 13:16:50] Sistema encerrado
+[2026-04-20 13:16:53] Sistema iniciado

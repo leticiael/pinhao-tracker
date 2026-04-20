@@ -6,6 +6,7 @@ from modules.validacao import (
     ler_data,
     ler_decimal,
     ler_inteiro,
+    ler_sim_nao,
     ler_texto_obrigatorio,
 )
 
@@ -81,9 +82,16 @@ def importar_clima_de_arquivo(repositorio, config: dict) -> None:
         print("  > Nenhum registro valido encontrado no arquivo.")
         return
 
-    importados = 0
     for reg in registros:
         reg["propriedade_id"] = propriedade_id
+
+    exibir_resumo_tabela_memoria(registros)
+    if not ler_sim_nao("Confirmar gravacao dos registros acima"):
+        print("  > Operacao cancelada. Nenhum registro foi gravado.")
+        return
+
+    importados = 0
+    for reg in registros:
         try:
             repositorio.inserir("registros_climaticos", reg)
             importados += 1
@@ -142,9 +150,16 @@ def importar_clima_da_api(repositorio, config: dict) -> None:
         print("  > Nenhum registro retornado para o periodo informado.")
         return
 
-    importados = 0
     for reg in registros:
         reg["propriedade_id"] = propriedade_id
+
+    exibir_resumo_tabela_memoria(registros)
+    if not ler_sim_nao("Confirmar gravacao dos registros acima"):
+        print("  > Operacao cancelada. Nenhum registro foi gravado.")
+        return
+
+    importados = 0
+    for reg in registros:
         try:
             repositorio.inserir("registros_climaticos", reg)
             importados += 1
@@ -177,6 +192,25 @@ def listar_registros_climaticos(repositorio, config: dict) -> None:
             f"{float(r['umidade_percentual']):>9.2f} "
             f"{float(r['precipitacao_mm']):>10.2f}"
         )
+
+
+def exibir_resumo_tabela_memoria(registros: list[dict]) -> None:
+    if not registros:
+        return
+    temperaturas = [float(r["temperatura_celsius"]) for r in registros]
+    umidades = [float(r["umidade_percentual"]) for r in registros]
+    precipitacoes = [float(r["precipitacao_mm"]) for r in registros]
+    datas_ordenadas = sorted(str(r["data_registro"]) for r in registros)
+    total = len(registros)
+    print("\n--- Tabela em memoria (preview antes de persistir) ---")
+    print(f"Total de registros:           {total}")
+    print(f"Periodo:                      {formatar_data(datas_ordenadas[0])} a {formatar_data(datas_ordenadas[-1])}")
+    print(f"Temperatura min/media/max:    "
+          f"{min(temperaturas):.1f} / {sum(temperaturas)/total:.1f} / {max(temperaturas):.1f} C")
+    print(f"Umidade min/media/max:        "
+          f"{min(umidades):.1f} / {sum(umidades)/total:.1f} / {max(umidades):.1f} %")
+    print(f"Precipitacao total/media:     "
+          f"{sum(precipitacoes):.2f} / {sum(precipitacoes)/total:.2f} mm")
 
 
 def avaliar_condicoes(temperatura: float, umidade: float, config: dict) -> None:
