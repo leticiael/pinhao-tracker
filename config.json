@@ -1,0 +1,52 @@
+{
+  "sistema": {
+    "nome": "Pinhao Tracker",
+    "versao": "1.0.0",
+    "ano": 2026,
+    "regiao_alvo": "Campina Grande do Sul e Quatro Barras - PR"
+  },
+  "safra": {
+    "inicio_mes_dia": "04-15",
+    "fim_mes_dia": "06-30",
+    "instrucao_normativa": "IAT no 03/2026"
+  },
+  "pinha": {
+    "pinhoes_min": 100,
+    "pinhoes_max": 120
+  },
+  "arvore": {
+    "nativa_anos_producao_min": 12,
+    "nativa_anos_producao_max": 15,
+    "enxertada_anos_producao_min": 6,
+    "enxertada_anos_producao_max": 8,
+    "temperatura_ideal_min_celsius": 15,
+    "temperatura_ideal_max_celsius": 25,
+    "altitude_ideal_min_metros": 800
+  },
+  "armazenamento": {
+    "granel_dias": 30,
+    "vacuo_refrigerado_dias": 120,
+    "congelado_dias": 210,
+    "dias_alerta_vencimento": 7
+  },
+  "precos": {
+    "pgpm_bio_minimo_kg": 3.66,
+    "medio_produtor_2025_kg": 6.44,
+    "referencia_medio": "Serra Catarinense",
+    "limiar_venda_favoravel": 1.05,
+    "limiar_venda_desfavoravel": 0.95
+  },
+  "multa": {
+    "valor_reais_por_50kg_min": 300
+  },
+  "arquivos": {
+    "log_operacoes": "dados/log_operacoes.txt",
+    "dados_json": "dados/dados.json",
+    "exportacao_json": "dados/exportacao.json"
+  },
+  "oracle": {
+    "user": "system",
+    "password": "oracle",
+    "dsn": "localhost:1521/XEPDB1"
+  }
+}
