@@ -4,13 +4,22 @@ Sistema de gestão da produção de pinhão (semente da *Araucaria angustifolia*
 
 ## Por que esse projeto existe
 
-Eu nasci e cresci na região de Quatro Barras, no Primeiro Planalto Paranaense. É uma região onde, se você sobe por qualquer estrada de terra, vê araucária até onde a vista alcança — e vê, também, famílias inteiras que dependem da terra. A agricultura familiar não é um detalhe econômico por aqui: é o sustento real de quem planta hortaliça, cria galinha, faz farinha de milho no moinho de pedra e, todo outono, sai com saco nas costas para bater pinhão.
+Sou de Quatro Barras, no Primeiro Planalto Paranaense — uma das regiões com maior concentração remanescente de *Araucaria angustifolia* do estado. O pinhão é **tradição local**: integra a culinária, a economia sazonal e o calendário rural de Quatro Barras, Campina Grande do Sul e das demais cidades da Rota do Pinhão. Essa tradição explica o recorte do projeto — em vez de um sistema genérico de gestão agrícola, um sistema específico para pinhão, para esta microrregião, com os parâmetros reais da legislação vigente.
 
-Todo mundo que é daqui conhece alguém que vive da roça. O pinhão, em particular, é uma renda sazonal que muitas famílias esperam o ano inteiro: chega em abril, vai até junho, e o que entra nesses dois meses e meio costuma cobrir coisa que não fecha durante o ano — conserto de telhado, remédio, material escolar dos filhos. É uma economia que não aparece no noticiário, mas que movimenta as feiras de Morretes, Piraquara, Campina Grande do Sul e Quatro Barras, e que sustenta a Rota do Pinhão, um dos poucos circuitos turísticos rurais do estado que realmente põe dinheiro no bolso de quem produz.
+Nas propriedades familiares da região, a gestão da produção é quase sempre feita em **caderno de papel ou na memória**. O caderno tem limitações concretas que atrapalham o produtor na prática:
 
-O problema é que, do lado de quem colhe, quase tudo ainda é feito no caderno. Anotar no caderno, quando se anota, virou hábito e não análise. Eu já vi produtor querendo saber quantos quilos tirou na safra passada e abrir três cadernos diferentes procurando uma linha específica. Já vi gente vendendo o saco no primeiro atravessador que aparece, em maio, por medo de ficar com o produto estragando em casa — e duas semanas depois o preço sobe 40%. Já vi pinhão estragar em porão porque ninguém lembrava quando tinha guardado. E já vi muita colheita fora de período, sem registro, sem controle de EPI, virando multa ou acidente.
+- **Consulta lenta** — recuperar um dado pontual exige folhear várias páginas ou abrir mais de um caderno.
+- **Risco físico** — papel molha, rasga, queima, ou simplesmente é descartado ao longo dos anos.
+- **Sem comparação automática** — confrontar a safra deste ano com a do ano passado exige refazer todas as contas à mão.
+- **Sem alertas de vencimento** — se o produtor esquecer a data em que guardou um lote, só descobre o vencimento quando abre a embalagem e encontra produto estragado.
+- **Sem referência de preço** — não há como comparar o valor oferecido pelo atravessador com a média histórica da própria propriedade.
 
-Este sistema não resolve o preço, o clima, nem a idade das árvores. Mas resolve o que está na mão do produtor: **saber o que foi produzido, quando, em que condição, por quanto, e o que ainda está em estoque**. É disso que nasce poder de barganha. E é por isso que, ao invés de fazer um projeto genérico de "controle de produção agrícola", escolhi fazer um projeto específico para o pinhão, para a minha região, com os números reais da legislação do IAT, da PGPM-Bio e da realidade da Cooperativa Nascente.
+Um **sistema específico** para a cadeia do pinhão, ao contrário do caderno, busca e filtra registros em segundos, calcula vencimentos automaticamente, compara anos e avisa em tempo útil. É exatamente o que o **Pinhão Tracker** faz, atuando sobre quatro frentes:
+
+- **Registra colheita diária** com validação automática do período legal de safra (IAT nº 03/2026) e cálculo da multa estimada caso a coleta caia fora da janela permitida.
+- **Controla armazenamento pós-colheita** com cálculo de validade por método (granel, vácuo refrigerado, congelado) e totalização das perdas em kg e em percentual, fechando o ciclo de controle de estoque.
+- **Analisa o momento de venda** comparando o preço atual com a média histórica registrada e com o preço mínimo federal PGPM-Bio, gerando recomendação objetiva de vender ou aguardar.
+- **Gera relatórios comparativos** de produtividade por safra e por propriedade, formando o histórico documental que serve de base para negociação com cooperativa e para solicitação de crédito rural.
 
 ## O pinhão em números
 
@@ -47,7 +56,7 @@ Os dois municípios estão no coração da **Rota do Pinhão**, circuito turíst
 - **Temperatura média anual entre 15 °C e 25 °C**, dentro da faixa ótima para a espécie.
 - **Cooperativismo ativo**, com destaque para a **Cooperativa Nascente**, que agrega pequenos produtores extrativistas e reforça o papel do pinhão como fonte complementar de renda em propriedades familiares.
 
-O extrativismo do pinhão é, nessas duas cidades, uma renda sazonal relevante em propriedades que combinam agricultura familiar, turismo rural e produção de erva-mate. Uma ferramenta simples de gestão aumenta o poder de barganha do produtor, reduz perdas e ajuda a preservar a araucária, espécie criticamente ameaçada de extinção. Preservar a árvore é preservar quem vive dela.
+O extrativismo do pinhão é, nessas duas cidades, uma renda sazonal relevante em propriedades que combinam agricultura familiar, turismo rural e produção de erva-mate. Uma ferramenta de gestão simples reduz perdas pós-colheita, aumenta o poder de barganha em relação ao atravessador e gera histórico documental — ativo relevante tanto para acesso a crédito rural quanto para eventual rastreabilidade ambiental, dado que a espécie é criticamente ameaçada.
 
 ## Solução proposta
 
