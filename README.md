@@ -1,4 +1,8 @@
-# Pinhão Tracker
+<img src="docs/imagens/pinha.svg" width="55" align="left" alt="" hspace="22">
+
+ <br>
+ 
+ # Pinhão Tracker
 
 Sistema de gestão da produção de pinhão (semente da *Araucaria angustifolia*) para pequenos produtores de **Campina Grande do Sul** e **Quatro Barras**, no Paraná. Projeto acadêmico FIAP 2026.
 
