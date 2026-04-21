@@ -1,10 +1,22 @@
+<img src="docs/imagens/pinha.svg" width="48" align="left" alt="" hspace="12">
+
 # Pinhão Tracker
 
 Sistema de gestão da produção de pinhão (semente da *Araucaria angustifolia*) para pequenos produtores da região de **Campina Grande do Sul** e **Quatro Barras**, no Paraná. Projeto acadêmico FIAP 2026.
 
 ## Por que esse projeto existe
 
-Sou de Quatro Barras, no Primeiro Planalto Paranaense — uma das regiões com maior concentração remanescente de *Araucaria angustifolia* do estado. O pinhão é **tradição local**: integra a culinária, a economia sazonal e o calendário rural de Quatro Barras, Campina Grande do Sul e das demais cidades da Rota do Pinhão. Essa tradição explica o recorte do projeto — em vez de um sistema genérico de gestão agrícola, um sistema específico para pinhão, para esta microrregião, com os parâmetros reais da legislação vigente.
+Se você nunca foi ao sul do Brasil, é provável que nunca tenha ouvido falar em pinhão. É a **semente da araucária** (*Araucaria angustifolia*), árvore-símbolo do estado do Paraná. A araucária produz uma pinha: uma estrutura lenhosa grande, parecida com um coco de 15 a 25 cm de diâmetro, que contém entre **100 e 120 sementes** protegidas por uma casca dura marrom. Cozido em água e sal, assado na brasa ou torrado no forno, o pinhão é base de receitas tradicionais do sul como **paçoca de pinhão, entrevero e arroz de pinhão**. É um alimento marcadamente sazonal: só aparece entre **abril e junho**, por força tanto da biologia da árvore quanto da Instrução Normativa do Instituto Água e Terra (IAT), que proíbe a coleta fora desse período.
+
+A araucária tem **peso cultural desproporcional** ao tamanho da sua população atual. Aparece no **brasão oficial do Paraná**, deu nome à cidade de Araucária (região metropolitana de Curitiba) e é referência central em festas tradicionais do sul — a **Festa Nacional do Pinhão**, em Lages (SC), atrai centenas de milhares de visitantes toda temporada — além de marcar literatura, música e gastronomia regional. Essa carga simbólica contrasta com a situação biológica: a espécie é classificada como **criticamente ameaçada de extinção** pela IUCN. Da Floresta com Araucárias original — cerca de 20 milhões de hectares — restam hoje menos de **3% no Brasil** e menos de **0,4% no próprio Paraná**. A tradição do pinhão acontece, portanto, em cima de uma árvore a um passo de desaparecer. Esse desequilíbrio é parte do problema que o projeto ajuda a endereçar: cada colheita registrada, cada propriedade cadastrada, também gera dado útil para **rastreabilidade ambiental** da espécie — algo que o caderno de papel não entrega.
+
+Sou de **Quatro Barras**, no Primeiro Planalto Paranaense — uma das regiões com maior concentração remanescente de *Araucaria angustifolia* do estado. A escolha do recorte geográfico do projeto (Quatro Barras + Campina Grande do Sul) tem três justificativas objetivas:
+
+- **Eixo da Rota do Pinhão.** As duas cidades estão no centro do circuito turístico oficial do Paraná que reúne os pontos de maior concentração de araucárias nativas. É onde a cadeia extrativista é mais densa.
+- **Altitude e clima ideais.** Ambas ficam **acima dos 800 metros** na Serra do Mar paranaense, dentro da faixa ótima para a araucária frutificar (15 a 25 °C de temperatura média anual).
+- **Cooperativismo ativo.** A **Cooperativa Nascente** agrega pequenos produtores extrativistas da microrregião, o que aumenta o impacto potencial de uma ferramenta de gestão comum.
+
+Soma-se a essas três razões a ligação pessoal com a região, que me dá contato direto com a realidade do produtor familiar a quem o sistema se destina. O pinhão é **tradição local**: integra a culinária, a economia sazonal e o calendário rural das duas cidades. Essa tradição, ancorada em dados concretos de altitude, legislação e organização cooperativa, explica o recorte do projeto — em vez de um sistema genérico de gestão agrícola, um sistema específico para pinhão, para esta microrregião, com os parâmetros reais da legislação vigente.
 
 Nas propriedades familiares da região, a gestão da produção é quase sempre feita em **caderno de papel ou na memória**. O caderno tem limitações concretas que atrapalham o produtor na prática:
 
@@ -47,16 +59,6 @@ Pequenos produtores extrativistas de pinhão do Primeiro Planalto Paranaense ope
 4. **Perdas pós-colheita.** Pinhão é altamente perecível. Armazenado a granel, dura cerca de 30 dias; a vácuo refrigerado, até 120 dias; e congelado, até 210 dias. Sem controle do método e da data de entrada em estoque, produto vence dentro do armazém e vira prejuízo puro.
 
 O **Pinhão Tracker** resolve essas quatro dores com cadastros estruturados, alertas automáticos de vencimento, validação do período oficial de safra e relatórios comparativos entre anos.
-
-## Por que Campina Grande do Sul e Quatro Barras
-
-Os dois municípios estão no coração da **Rota do Pinhão**, circuito turístico e gastronômico criado pelo governo do Paraná que reúne os pontos de maior concentração de araucárias nativas do estado. A região reúne três características que a tornam estratégica:
-
-- **Altitude acima de 800 metros** na Serra do Mar paranaense, condição ideal para a *Araucaria angustifolia*.
-- **Temperatura média anual entre 15 °C e 25 °C**, dentro da faixa ótima para a espécie.
-- **Cooperativismo ativo**, com destaque para a **Cooperativa Nascente**, que agrega pequenos produtores extrativistas e reforça o papel do pinhão como fonte complementar de renda em propriedades familiares.
-
-O extrativismo do pinhão é, nessas duas cidades, uma renda sazonal relevante em propriedades que combinam agricultura familiar, turismo rural e produção de erva-mate. Uma ferramenta de gestão simples reduz perdas pós-colheita, aumenta o poder de barganha em relação ao atravessador e gera histórico documental — ativo relevante tanto para acesso a crédito rural quanto para eventual rastreabilidade ambiental, dado que a espécie é criticamente ameaçada.
 
 ## Solução proposta
 
