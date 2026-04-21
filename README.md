@@ -1,4 +1,4 @@
-# ![](docs/imagens/pinha.svg) Pinhão Tracker
+# Pinhão Tracker
 
 Sistema de gestão da produção de pinhão (semente da *Araucaria angustifolia*) para pequenos produtores de **Campina Grande do Sul** e **Quatro Barras**, no Paraná. Projeto acadêmico FIAP 2026.
 
@@ -43,7 +43,7 @@ Sistema de terminal em Python 3.12+ que oferece:
 ### Dados científicos embutidos
 
 | Parâmetro | Valor |
-|---|---|
+| --- | --- |
 | Período de safra no PR | 15/04 a 30/06 (IAT nº 03/2026) |
 | Pinhões por pinha | 100 a 120 |
 | Idade produtiva — nativa / enxertada | 12–15 / 6–8 anos |
@@ -90,7 +90,7 @@ Sem Oracle, o armazenamento é em `dados/dados.json`.
 
 Formato em `dados/clima_exemplo.txt`:
 
-```
+```csv
 DD/MM/AAAA;temperatura;umidade;precipitacao
 15/04/2026;14.2;85.0;8.5
 ```
@@ -148,7 +148,7 @@ Demonstração direta do requisito de **tabela em memória**: a `list[dict]` é 
 
 ## Estrutura
 
-```
+```text
 pinhao-tracker/
 ├── main.py                      # Ponto de entrada
 ├── config.json                  # Configurações e dados científicos
@@ -183,4 +183,3 @@ GitHub: [leticiael/pinhao-tracker](https://github.com/leticiael/pinhao-tracker)
 - **Remanescentes no PR** — Mongabay Brasil: <https://brasil.mongabay.com/2022/03/araucarias-em-rota-de-extincao-sao-cortadas-com-aval-dos-orgaos-publicos/>
 - **IN IAT nº 03/2026** — período oficial de coleta no PR.
 - **PGPM-Bio** — Conab / Ministério da Agricultura; preço mínimo R$ 3,66/kg.
-                                                                                        
