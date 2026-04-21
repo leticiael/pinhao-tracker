@@ -2,184 +2,110 @@
 
 # Pinhão Tracker
 
-Sistema de gestão da produção de pinhão (semente da *Araucaria angustifolia*) para pequenos produtores da região de **Campina Grande do Sul** e **Quatro Barras**, no Paraná. Projeto acadêmico FIAP 2026.
+Sistema de gestão da produção de pinhão (semente da *Araucaria angustifolia*) para pequenos produtores de **Campina Grande do Sul** e **Quatro Barras**, no Paraná. Projeto acadêmico FIAP 2026.
 
 ## Por que esse projeto existe
 
-Se você nunca foi ao sul do Brasil, é provável que nunca tenha ouvido falar em pinhão. É a **semente da araucária** (*Araucaria angustifolia*), árvore-símbolo do estado do Paraná. A araucária produz uma pinha: uma estrutura lenhosa grande, parecida com um coco de 15 a 25 cm de diâmetro, que contém entre **100 e 120 sementes** protegidas por uma casca dura marrom. Cozido em água e sal, assado na brasa ou torrado no forno, o pinhão é base de receitas tradicionais do sul como **paçoca de pinhão, entrevero e arroz de pinhão**. É um alimento marcadamente sazonal: só aparece entre **abril e junho**, por força tanto da biologia da árvore quanto da Instrução Normativa do Instituto Água e Terra (IAT), que proíbe a coleta fora desse período.
+Se você nunca foi ao sul do Brasil, é provável que nunca tenha ouvido falar em pinhão. É a **semente da araucária**, árvore-símbolo do Paraná, de **gosto único**, colhida entre 15/04 e 30/06 por força da **IN IAT nº 03/2026**. Cozida, assada ou torrada, é base de receitas tradicionais do sul.
 
-A araucária tem **peso cultural desproporcional** ao tamanho da sua população atual. Aparece no **brasão oficial do Paraná**, deu nome à cidade de Araucária (região metropolitana de Curitiba) e é referência central em festas tradicionais do sul — a **Festa Nacional do Pinhão**, em Lages (SC), atrai centenas de milhares de visitantes toda temporada — além de marcar literatura, música e gastronomia regional. Essa carga simbólica contrasta com a situação biológica: a espécie é classificada como **criticamente ameaçada de extinção** pela IUCN. Da Floresta com Araucárias original — cerca de 20 milhões de hectares — restam hoje menos de **3% no Brasil** e menos de **0,4% no próprio Paraná**. A tradição do pinhão acontece, portanto, em cima de uma árvore a um passo de desaparecer. Esse desequilíbrio é parte do problema que o projeto ajuda a endereçar: cada colheita registrada, cada propriedade cadastrada, também gera dado útil para **rastreabilidade ambiental** da espécie — algo que o caderno de papel não entrega.
+Nasci em **Quatro Barras**, no Primeiro Planalto Paranaense. O produtor familiar do pinhão lida com regulações específicas e uma janela curta de renda, e precisa de ferramentas que o ajudem a registrar, analisar e gerenciar a safra. O recorte geográfico do projeto (Quatro Barras + Campina Grande do Sul) tem três justificativas objetivas:
 
-Sou de **Quatro Barras**, no Primeiro Planalto Paranaense — uma das regiões com maior concentração remanescente de *Araucaria angustifolia* do estado. A escolha do recorte geográfico do projeto (Quatro Barras + Campina Grande do Sul) tem três justificativas objetivas:
-
-- **Eixo da Rota do Pinhão.** As duas cidades estão no centro do circuito turístico oficial do Paraná que reúne os pontos de maior concentração de araucárias nativas. É onde a cadeia extrativista é mais densa.
-- **Altitude e clima ideais.** Ambas ficam **acima dos 800 metros** na Serra do Mar paranaense, dentro da faixa ótima para a araucária frutificar (15 a 25 °C de temperatura média anual).
-- **Cooperativismo ativo.** A **Cooperativa Nascente** agrega pequenos produtores extrativistas da microrregião, o que aumenta o impacto potencial de uma ferramenta de gestão comum.
-
-Soma-se a essas três razões a ligação pessoal com a região, que me dá contato direto com a realidade do produtor familiar a quem o sistema se destina. O pinhão é **tradição local**: integra a culinária, a economia sazonal e o calendário rural das duas cidades. Essa tradição, ancorada em dados concretos de altitude, legislação e organização cooperativa, explica o recorte do projeto — em vez de um sistema genérico de gestão agrícola, um sistema específico para pinhão, para esta microrregião, com os parâmetros reais da legislação vigente.
-
-Nas propriedades familiares da região, a gestão da produção é quase sempre feita em **caderno de papel ou na memória**. O caderno tem limitações concretas que atrapalham o produtor na prática:
-
-- **Consulta lenta** — recuperar um dado pontual exige folhear várias páginas ou abrir mais de um caderno.
-- **Risco físico** — papel molha, rasga, queima, ou simplesmente é descartado ao longo dos anos.
-- **Sem comparação automática** — confrontar a safra deste ano com a do ano passado exige refazer todas as contas à mão.
-- **Sem alertas de vencimento** — se o produtor esquecer a data em que guardou um lote, só descobre o vencimento quando abre a embalagem e encontra produto estragado.
-- **Sem referência de preço** — não há como comparar o valor oferecido pelo atravessador com a média histórica da própria propriedade.
-
-Um **sistema específico** para a cadeia do pinhão, ao contrário do caderno, busca e filtra registros em segundos, calcula vencimentos automaticamente, compara anos e avisa em tempo útil. É exatamente o que o **Pinhão Tracker** faz, atuando sobre quatro frentes:
-
-- **Registra colheita diária** com validação automática do período legal de safra (IAT nº 03/2026) e cálculo da multa estimada caso a coleta caia fora da janela permitida.
-- **Controla armazenamento pós-colheita** com cálculo de validade por método (granel, vácuo refrigerado, congelado) e totalização das perdas em kg e em percentual, fechando o ciclo de controle de estoque.
-- **Analisa o momento de venda** comparando o preço atual com a média histórica registrada e com o preço mínimo federal PGPM-Bio, gerando recomendação objetiva de vender ou aguardar.
-- **Gera relatórios comparativos** de produtividade por safra e por propriedade, formando o histórico documental que serve de base para negociação com cooperativa e para solicitação de crédito rural.
+- **Eixo da Rota do Pinhão** — circuito turístico oficial do PR que concentra os maiores remanescentes de araucária; é onde a cadeia extrativista é mais densa.
+- **Altitude e clima ideais** — acima de 800 m na Serra do Mar, dentro da faixa ótima para a espécie (15 a 25 °C).
+- **Cooperativismo ativo** — a **Cooperativa Nascente** agrega extrativistas da microrregião, multiplicando o impacto de uma ferramenta comum.
 
 ## O pinhão em números
 
-A narrativa acima é pessoal, mas o peso dela está nos dados públicos. Os principais:
+- **Paraná lidera em valor**: 43,3% do valor nacional de produção (R$ 26,8 mi de R$ 61,9 mi) em 2023, segundo **PEVS/IBGE**. Disputa o 1º lugar em volume com MG ano a ano (38,5% em 2021, 32,9% em 2023).
+- **100% extrativismo**: o IBGE classifica toda a produção como **extração vegetal** — sai de árvores nativas em pé, nas mãos de famílias vizinhas a remanescentes de floresta.
+- **1/3 da renda anual em 75 dias**: reportagem da Sedest-PR documenta Elizabeth Guedes de Freitas Costa, produtora de **Campina Grande do Sul**, para quem o pinhão é um terço da renda anual, concentrado na janela legal.
+- **Pequeno no agregado, concentrado na região**: 3,3% do valor nacional dos não-madeireiros, mas concentrado em poucas microrregiões — das quais a Rota do Pinhão é a principal.
 
-- **Árvore criticamente ameaçada.** A *Araucaria angustifolia* é classificada como **criticamente ameaçada de extinção** pela IUCN (União Internacional para a Conservação da Natureza). Da Floresta com Araucárias original — estimada em cerca de **20 milhões de hectares** — restam hoje **menos de 3%** no Brasil. No Paraná, a situação é ainda mais dramática: sobra **menos de 0,4%** dos 8 milhões de hectares nativos originais. Cada árvore que ainda frutifica é uma sobrevivente estatística.
+## O problema
 
-- **Paraná é o maior produtor nacional em valor.** Segundo a **Pesquisa de Produção da Extração Vegetal e da Silvicultura (PEVS/IBGE) de 2023**, o Paraná respondeu por **43,3% do valor de produção de pinhão do Brasil** — R$ 26,8 milhões dos R$ 61,9 milhões nacionais. Em volume, o estado disputa o primeiro lugar ano a ano com Minas Gerais: foi **38,5% do volume nacional em 2021** e 32,9% em 2023 (contra 33,8% de MG).
+Pequenos produtores operam em caderno ou na memória, o que gera quatro dores recorrentes:
 
-- **Tudo é extrativismo, nada é silvicultura.** O IBGE classifica a produção oficial de pinhão como **extração vegetal**, não silvicultura. Isso quer dizer que o volume sai de **árvores nativas em pé**, não de plantio comercial. Por isso a cadeia está estruturalmente nas mãos de famílias que vivem próximo a remanescentes de Floresta com Araucárias — o perfil exato do produtor que este sistema pretende servir.
-
-- **Um terço da renda anual em 75 dias.** Reportagem da Secretaria do Desenvolvimento Sustentável do Paraná documenta o caso de **Elizabeth Guedes de Freitas Costa, produtora de Campina Grande do Sul** — exatamente uma das duas cidades-alvo deste projeto. Para a família dela, o pinhão representa **um terço da renda do ano inteiro**, concentrado nos cerca de **75 dias** da janela legal de safra (15/04 a 30/06, IAT nº 03/2026). Fora dessa janela, são mais de 80% do ano sem receita direta dessa cadeia.
-
-- **Pequeno no agregado nacional, grande na região.** No conjunto dos produtos não-madeireiros do extrativismo brasileiro, o pinhão representa cerca de **3,3% do valor** — muito atrás do açaí (46%) e da erva-mate (31,8%). O número parece pouco porque é um mapa de distribuição: a cadeia do pinhão é **concentrada** em poucos estados e, dentro do Paraná, em poucas microrregiões, das quais a Rota do Pinhão (que inclui Campina Grande do Sul e Quatro Barras) é a principal.
-
-Esse quadro explica por que um sistema simples de gestão faz diferença aqui: uma cadeia concentrada, com janela curta, totalmente extrativista e em árvore criticamente ameaçada — cada quilo registrado importa, tanto para a renda familiar quanto para a rastreabilidade ambiental.
-
-## O problema, em termos práticos
-
-Pequenos produtores extrativistas de pinhão do Primeiro Planalto Paranaense operam, em sua maioria, sem nenhum tipo de controle sistemático da produção. Toda a gestão é feita em cadernos, papéis avulsos ou na memória, o que gera quatro consequências diretas e recorrentes:
-
-1. **Desconhecimento da produtividade real por safra.** Sem registrar kg colhidos por dia e por propriedade, o produtor não consegue avaliar se sua produção melhorou, estagnou ou caiu ao longo dos anos — e, portanto, não consegue negociar com cooperativa nem pleitear crédito rural com base em histórico.
-2. **Ausência de histórico climático.** A produção da araucária é altamente sensível a temperatura, umidade e regime de chuvas. Uma safra fraca pode ser culpa de uma geada tardia ou de um outono muito seco, mas sem dados atrelados não há como saber — e não há como se planejar para o ano seguinte.
-3. **Venda no momento errado.** O preço do pinhão oscila fortemente dentro da própria safra. Sem histórico de preços comparado à média, o produtor vende para o primeiro comprador que aparece, tipicamente um atravessador que passa na porteira em maio. Em muitos casos, esperar duas ou três semanas significaria 30–40% a mais no quilo.
-4. **Perdas pós-colheita.** Pinhão é altamente perecível. Armazenado a granel, dura cerca de 30 dias; a vácuo refrigerado, até 120 dias; e congelado, até 210 dias. Sem controle do método e da data de entrada em estoque, produto vence dentro do armazém e vira prejuízo puro.
-
-O **Pinhão Tracker** resolve essas quatro dores com cadastros estruturados, alertas automáticos de vencimento, validação do período oficial de safra e relatórios comparativos entre anos.
+1. **Desconhecimento de produtividade por safra** — sem histórico de kg/dia, não há base para negociar com cooperativa nem pleitear crédito rural.
+2. **Ausência de histórico climático** — sem dado atrelado, não dá para saber se a safra fraca foi culpa da geada tardia ou do outono seco.
+3. **Venda no momento errado** — sem referência de preço, vende-se ao primeiro atravessador; esperar 2–3 semanas significaria 30–40% a mais no quilo.
+4. **Perdas pós-colheita** — a granel, 30 dias; vácuo refrigerado, 120; congelado, até 210. Sem controle, o produto vence no armazém.
 
 ## Solução proposta
 
-O Pinhão Tracker é um sistema de terminal, escrito em Python 3.12+, que oferece:
+Sistema de terminal em Python 3.12+ que oferece:
 
-- **Cadastro de propriedade e árvores** (quantidade, tipo nativa ou enxertada, idade estimada), com alertas sobre altitude e idade produtiva.
-- **Registro de colheita diária** (data, kg coletados, método chão ou escalada, uso de EPI), com validação do período oficial de safra e cálculo de multa estimada para coletas fora do período.
-- **Monitoramento climático** com registro manual ou importação em lote via arquivo `.txt`, com avaliação de temperatura e umidade contra as faixas ideais.
-- **Controle de armazenamento pós-colheita** com cálculo automático de vencimento conforme o método (granel, vácuo refrigerado, congelado) e alertas visuais de validade.
-- **Registro de preços e análise de momento de venda**, comparando preço atual com média histórica, preço mínimo federal PGPM-Bio e referências regionais para sugerir **vender agora** ou **aguardar**.
-- **Relatórios**: produtividade por safra, comparativo entre anos (variação absoluta e percentual) e custo versus receita com cálculo de margem líquida.
-- **Log de operações** em `.txt` e **exportação de dados** em `.json`.
+- **Cadastro de propriedade e árvores** (nativa/enxertada, idade) com alertas de altitude e faixa produtiva.
+- **Registro de colheita diária** com validação do período oficial (IAT nº 03/2026) e multa estimada para coleta fora da janela.
+- **Monitoramento climático** manual ou em lote via `.txt`, com avaliação contra faixas ideais.
+- **Controle de armazenamento** com cálculo automático de vencimento por método e **totalização de perdas** em kg e %.
+- **Análise de momento de venda** comparando preço atual com média histórica e PGPM-Bio, sugerindo **vender agora** ou **aguardar**.
+- **Relatórios** de produtividade por safra e por propriedade, comparativo entre anos, custo vs receita.
+- **Log de operações** em `.txt` e **exportação** em `.json`.
 
 ### Dados científicos embutidos
 
 | Parâmetro | Valor |
 |---|---|
-| Período oficial de safra no PR | 15/04 a 30/06 (IAT nº 03/2026) |
+| Período de safra no PR | 15/04 a 30/06 (IAT nº 03/2026) |
 | Pinhões por pinha | 100 a 120 |
-| Idade produtiva — araucária nativa | 12 a 15 anos |
-| Idade produtiva — araucária enxertada | 6 a 8 anos |
-| Temperatura média anual ideal | 15 °C a 25 °C |
-| Altitude ideal | acima de 800 m |
-| Armazenamento a granel | ~30 dias |
-| Armazenamento a vácuo refrigerado | ~120 dias |
-| Armazenamento congelado | até 210 dias |
-| Preço mínimo federal PGPM-Bio 2024 | R$ 3,66/kg |
-| Preço médio ao produtor 2025 (Serra Catarinense) | R$ 6,44/kg |
+| Idade produtiva — nativa / enxertada | 12–15 / 6–8 anos |
+| Temperatura ideal / altitude mínima | 15–25 °C / 800 m |
+| Armazenamento: granel / vácuo / congelado | 30 / 120 / 210 dias |
+| PGPM-Bio (mínimo federal) | R$ 3,66/kg |
+| Preço médio produtor 2025 (Serra Catarinense) | R$ 6,44/kg |
 | Multa por coleta fora da safra | R$ 300 a cada 50 kg apreendidos |
 
 ## Requisitos técnicos atendidos
 
-- **Subalgoritmos**: todas as funcionalidades estão organizadas em funções com passagem de parâmetros.
-- **Estruturas de dados**: uso de **listas** (coleções de registros retornadas pelo repositório), **tuplas** (opções imutáveis de menu, faixas etárias produtivas, métodos de armazenamento, coordenadas de referência das cidades-alvo) e **dicionários** (arquivo de configuração, registros individuais representando linhas, agregações como `totais_por_ano`).
-- **Tabela em memória**: as importações em lote de clima — tanto por arquivo `.txt` quanto pela API Open-Meteo — constroem uma **lista de dicionários simulando uma tabela do banco**. Essa tabela em memória é **manipulada** (adição do campo `propriedade_id` em cada linha) e **resumida** em um preview (`exibir_resumo_tabela_memoria` em `modules/clima.py`) para revisão pelo usuário **antes de ser persistida** no Oracle ou no JSON. O produtor confirma ou aborta a gravação com base nas estatísticas agregadas do preview (total de registros, período, faixa de temperatura, umidade e precipitação).
-- **Manipulação de arquivos**: `.txt` para log de operações e importação de clima; `.json` para configuração e exportação.
-- **Banco de dados Oracle** via biblioteca `oracledb`, com **fallback gracioso para JSON** caso o servidor não esteja disponível ou as tabelas não estejam criadas.
+- **Subalgoritmos** com passagem de parâmetros em todas as funcionalidades.
+- **Estruturas de dados**: listas (coleções de registros), tuplas (opções de menu, faixas, coordenadas), dicionários (config, registros, agregações).
+- **Tabela em memória**: importações em lote de clima constroem uma `list[dict]` simulando a tabela do banco, manipulada (adição de `propriedade_id`) e resumida em preview (`exibir_resumo_tabela_memoria` em `modules/clima.py`) para revisão **antes de persistir** — o usuário confirma ou aborta a gravação com base nos agregados (total, período, faixas de temperatura/umidade/precipitação).
+- **Manipulação de arquivos**: `.txt` (log + importação de clima) e `.json` (config + exportação).
+- **Banco Oracle** via `oracledb`, com **fallback gracioso para JSON** se o Oracle estiver indisponível.
 
-## Instalação
+## Instalação e execução
 
 ```bash
 python -m venv .venv
-# Windows
-.venv\Scripts\activate
-# Linux/macOS
-source .venv/bin/activate
-
-pip install oracledb
+source .venv/bin/activate      # Linux/macOS — Windows: .venv\Scripts\activate
+pip install oracledb           # opcional; sem ele o sistema opera em modo JSON
+python main.py
 ```
 
-> Python 3.12 ou superior é necessário. A única dependência externa é `oracledb`. O sistema funciona sem `oracledb` instalado: opera em modo JSON automaticamente.
+Requer **Python 3.12+**. Única dependência externa: `oracledb` (opcional).
 
-## Configuração do Oracle (opcional)
+### Oracle (opcional)
 
-1. Tenha um Oracle Database acessível (local ou remoto).
-2. Ajuste as credenciais em `config.json` no bloco `"oracle"` (`user`, `password`, `dsn`).
-3. Execute o script DDL para criar as tabelas:
+Ajustar credenciais em `config.json` → `"oracle"` e criar tabelas:
 
 ```bash
 sqlplus seu_usuario/sua_senha@seu_dsn @setup_database.sql
 ```
 
-Sem Oracle configurado, o sistema usa `dados/dados.json` como armazenamento.
+Sem Oracle, o armazenamento é em `dados/dados.json`.
 
-## Execução
+### Menu principal
 
-```bash
-python main.py
-```
+![Menu principal do Pinhão Tracker em modo JSON](docs/imagens/menuprincipal.png)
 
-O menu principal é exibido ao iniciar. Todas as operações são acessadas por submenus numerados, e o cabeçalho indica a versão do sistema, o ano da safra, a região-alvo e o **modo de armazenamento ativo** (ORACLE ou JSON — JSON é o padrão quando o Oracle não está disponível).
+### Importação de clima via `.txt`
 
-![Menu principal do Pinhão Tracker executando em modo JSON](docs/imagens/menuprincipal.png)
-
-### Importação de clima a partir de `.txt`
-
-O arquivo `dados/clima_exemplo.txt` ilustra o formato esperado:
+Formato em `dados/clima_exemplo.txt`:
 
 ```
 DD/MM/AAAA;temperatura;umidade;precipitacao
 15/04/2026;14.2;85.0;8.5
 ```
 
-Linhas iniciadas por `#` são tratadas como comentário e ignoradas.
+Linhas iniciadas por `#` são comentários.
 
-## Recurso extra: importação automática via API Open-Meteo
+## Recurso extra: API Open-Meteo
 
-Além da importação por arquivo `.txt` (que cumpre integralmente o requisito de manipulação de `.txt`), o sistema oferece como **recurso opcional** a importação automática de histórico climático via **API pública da Open-Meteo** (serviço gratuito de dados meteorológicos, sem necessidade de chave de acesso).
+Além da importação por `.txt` (que atende integralmente o requisito), o sistema oferece importação automática via **API pública da Open-Meteo** — serviço gratuito, sem chave de acesso. Fluxo: `3. Monitoramento Climatico → 3. Importar clima da API Open-Meteo (extra)` → ID da propriedade → latitude e longitude (sugestões de Quatro Barras e CGS são exibidas) → intervalo de datas. O sistema baixa temperatura média, umidade e precipitação diárias e grava em `registros_climaticos`.
 
-### Por que esse extra existe
+![Importação automática de clima pela API Open-Meteo](docs/imagens/importacaoapi.png)
 
-O produtor raramente tem estação meteorológica própria. Digitar clima dia a dia é inviável, e nem sempre há arquivo `.txt` pronto. Puxar o histórico da Open-Meteo por coordenada geográfica cobre essa lacuna e fecha o ciclo da segunda dor descrita no início deste documento (ausência de histórico climático atrelado à safra).
-
-### Como funciona
-
-1. No menu principal, entre em **3. Monitoramento Climatico**.
-2. Escolha **3. Importar clima da API Open-Meteo (extra)**.
-3. O sistema lista as propriedades cadastradas e pede o ID da propriedade-destino.
-4. Exibe coordenadas de referência da região-alvo (Quatro Barras e Campina Grande do Sul) e pede latitude e longitude em graus decimais.
-5. Pede data inicial e data final do período desejado.
-6. Baixa temperatura média diária, umidade relativa média diária e precipitação total diária da API e grava na tabela `registros_climaticos` vinculada à propriedade.
-
-![Execução da importação automática de clima pela API Open-Meteo](docs/imagens/importacaoapi.png)
-
-### Sem bibliotecas externas adicionais
-
-A integração usa apenas `urllib.request` e `json`, ambos da **biblioteca padrão do Python**. Nenhuma dependência a mais em relação ao projeto base — o requisito de usar apenas `oracledb` como biblioteca externa continua atendido.
-
-### Fallback gracioso
-
-Se a rede estiver indisponível, a API estiver fora do ar, ou o tempo limite for excedido, o sistema exibe mensagem clara e sugere a alternativa por arquivo `.txt`. Nenhum registro parcial é gravado em caso de falha de comunicação.
-
-### Como desativar
-
-Em `config.json`, no bloco `api_clima`, troque `"habilitada": true` para `"habilitada": false`. A opção some na prática: ao ser chamada, informa que o recurso está desativado e retorna ao menu.
-
-### Atribuição
-
-Os dados vêm do serviço **Open-Meteo** (<https://open-meteo.com>), sob licença **Creative Commons Attribution 4.0 (CC BY 4.0)**. A atribuição é exibida na tela do terminal toda vez que o recurso é utilizado.
-
-### Configuração
+Detalhes: usa apenas `urllib.request` + `json` da **stdlib** (zero libs externas adicionais). Em falha de rede, API fora do ar ou timeout, o sistema avisa e sugere o fallback por `.txt` — nada é gravado parcialmente. Desativar: `config.json → api_clima.habilitada = false`. Dados sob licença **CC BY 4.0 da Open-Meteo**, atribuição exibida em cada uso.
 
 ```json
 "api_clima": {
@@ -192,44 +118,37 @@ Os dados vêm do serviço **Open-Meteo** (<https://open-meteo.com>), sob licenç
 
 ## Capturas de tela
 
-Esta seção reúne registros do sistema em execução — todas capturadas direto do terminal, com dados-exemplo coerentes com o cenário descrito ao longo do README.
+### Cadastro de propriedade com validação semântica
 
-### Cadastro de propriedade com validação de altitude
+![Cadastro com alerta de altitude](docs/imagens/registropropriedade.png)
 
-![Cadastro de propriedade com validação de altitude ideal para araucária](docs/imagens/registropropriedade.png)
+Valida cada entrada e compara altitude com o mínimo ideal (800 m) — `[OK]` se adequado, `[ALERTA]` caso contrário. Validação que olha o **sentido agronômico** do dado, não só o tipo.
 
-Ao cadastrar uma propriedade, o sistema valida toda entrada (nome, município, área em hectares, altitude em metros, nome do produtor) e, logo após gravar o registro, compara a altitude informada com o mínimo ideal para araucária produtiva configurado em `config.json` (800 m). Acima desse valor, exibe `[OK] Altitude adequada para a cultura da araucaria`; abaixo, dispara `[ALERTA]` sinalizando que a região pode não ser ideal para a espécie. É um exemplo de **validação semântica** — não basta o dado ter o tipo correto, ele precisa fazer sentido agronômico.
+### Colheita fora do período legal (3 validações em 1 tela)
 
-### Registro de colheita fora do período legal
+![Colheita fora da janela legal com multa e alerta de EPI](docs/imagens/colheitaforadoperiodo.png)
 
-![Registro de colheita fora do período oficial de safra, com cálculo automático de multa e alerta de segurança por escalada sem EPI](docs/imagens/colheitaforadoperiodo.png)
+Para uma colheita em 10/07/2026, escalada, sem EPI, o sistema dispara três validações independentes: `[ALERTA]` de fora do período oficial com base legal; cálculo automático de **multa** (R$ 300 por faixa de 50 kg); `[ALERTA SEGURANCA]` para escalada sem EPI.
 
-Este é o ponto mais rico do sistema em termos de regras de negócio. Ao receber uma colheita com data fora da janela oficial (15/04 a 30/06, conforme IAT nº 03/2026), o sistema:
-1. Dispara `[ALERTA]` de colheita fora do período oficial, citando a base legal.
-2. Calcula automaticamente a **multa mínima estimada**, aplicando R$ 300,00 por faixa de 50 kg apreendidos, conforme a legislação estadual.
-3. Avalia em paralelo as condições de segurança da colheita: quando o método é **escalada sem EPI**, emite um segundo alerta — `[ALERTA SEGURANCA] Coleta por escalada sem EPI representa risco grave de queda.`
+### Painel de armazenamento com taxa de perda
 
-Três validações independentes (legal, financeira e de segurança) acionadas numa única operação.
+![Painel de vencimentos com perda calculada](docs/imagens/painelvencimentos.png)
 
-### Painel de armazenamento com totalização de perdas
-
-![Painel de vencimentos com resumo de lotes OK, em alerta e vencidos, com taxa de perda calculada em percentual](docs/imagens/painelvencimentos.png)
-
-Painel que ataca a quarta dor descrita na abertura do README — perdas pós-colheita. Cada lote aparece com data de entrada, vencimento calculado automaticamente conforme o método (granel ≈ 30 dias, vácuo refrigerado ≈ 120 dias, congelado ≈ 210 dias) e dias restantes até vencer. O rodapé totaliza as três classificações, calcula a **taxa de perda em percentual** sobre o total armazenado e, quando a perda passa de 5%, dispara um `[ALERTA]` sugerindo revisão do método de armazenamento e do giro de estoque. Transforma um simples registro em métrica de gestão.
+Lotes com validade por método (30/120/210 dias). Rodapé totaliza OK/ALERTA/VENCIDO, calcula **taxa de perda em %** e alerta quando passa de 5%. Transforma registro em métrica de gestão — ataca a 4ª dor.
 
 ### Análise de momento de venda
 
-![Análise de momento de venda comparando preço atual com média histórica e preço mínimo federal PGPM-Bio](docs/imagens/analsiemomentodavenda.png)
+![Análise comparando preço com média e PGPM-Bio](docs/imagens/analsiemomentodavenda.png)
 
-O sistema lê o histórico de preços registrados pelo produtor e gera um quadro com seis indicadores comparativos: preço mais recente, média histórica, mínimo e máximo registrados, preço mínimo federal PGPM-Bio (R$ 3,66/kg) e referência de 2025 da Serra Catarinense (R$ 6,44/kg). A partir desses dados e dos limiares configurados (5% acima da média = favorável, 5% abaixo = desfavorável), o sistema retorna uma recomendação objetiva — **VENDER AGORA**, **AGUARDAR** ou **NEUTRO** — com a justificativa explícita. Resolve a terceira dor: venda no momento errado por falta de referência de preço comparável.
+Seis indicadores (atual, média, mín/máx, PGPM-Bio, referência 2025) e **recomendação objetiva**: `VENDER AGORA`, `AGUARDAR` ou `NEUTRO` com justificativa. Ataca a 3ª dor.
 
-### Preview da tabela em memória (importação em lote)
+### Preview da tabela em memória
 
-![Preview de tabela em memória com estatísticas agregadas da importação antes de persistir no banco](docs/imagens/previewtabelamemoria.png)
+![Preview agregado da importação em lote](docs/imagens/previewtabelamemoria.png)
 
-Demonstração do requisito de **tabela em memória**: ao importar clima (por arquivo `.txt` ou via API Open-Meteo), o sistema monta uma `list[dict]` representando as linhas da tabela `registros_climaticos`, manipula esse conjunto adicionando o `propriedade_id` a cada linha e, **antes de persistir no Oracle ou no JSON**, exibe um resumo agregado — total de registros, período, faixas de temperatura, umidade e precipitação. O produtor só efetiva a gravação se confirmar o preview; caso contrário, a operação é abortada sem nenhuma inserção. Essa etapa torna visível ao usuário o padrão "construir em memória → revisar → persistir" que até então ficava implícito no código.
+Demonstração direta do requisito de **tabela em memória**: a `list[dict]` é construída, manipulada (`propriedade_id`) e resumida antes da persistência. O produtor confirma ou aborta com base nos agregados.
 
-## Estrutura do projeto
+## Estrutura
 
 ```
 pinhao-tracker/
@@ -238,17 +157,14 @@ pinhao-tracker/
 ├── setup_database.sql           # DDL das tabelas Oracle
 ├── README.md
 ├── dados/
-│   ├── clima_exemplo.txt        # Arquivo exemplo para importação
-│   ├── dados.json               # Gerado em tempo de execução (modo JSON)
-│   ├── exportacao.json          # Gerado na exportação
-│   └── log_operacoes.txt        # Gerado em tempo de execução
+│   ├── clima_exemplo.txt        # Formato para importação por .txt
+│   └── dados.json / exportacao.json / log_operacoes.txt   # Gerados em runtime
 └── modules/
-    ├── __init__.py
-    ├── api_clima.py             # Cliente HTTP Open-Meteo (recurso extra)
+    ├── api_clima.py             # Cliente HTTP Open-Meteo (extra)
     ├── arquivo.py               # I/O de .txt e .json
     ├── armazenamento.py         # Controle pós-colheita
     ├── clima.py                 # Monitoramento climático
-    ├── colheita.py              # Registro diário de colheita
+    ├── colheita.py              # Registro de colheita
     ├── database.py              # Oracle + fallback JSON
     ├── menu.py                  # Menus e navegação
     ├── precos.py                # Preços e recomendação de venda
@@ -257,20 +173,16 @@ pinhao-tracker/
     └── validacao.py             # Validação de entradas
 ```
 
-## Dependências
-
-- Python 3.12+
-- `oracledb` (opcional — sistema tem fallback para JSON)
-
 ## Repositório
 
 GitHub: [leticiael/pinhao-tracker](https://github.com/leticiael/pinhao-tracker)
 
-## Fontes dos dados citados
+## Fontes
 
-- **Produção da Extração Vegetal e da Silvicultura (PEVS)** — IBGE, edições 2021 e 2023. Fornece volume, valor de produção e ranking estadual do pinhão: <https://www.ibge.gov.br/estatisticas/economicas/agricultura-e-pecuaria/9105-producao-da-extracao-vegetal-e-da-silvicultura.html>
-- **Pinhão e renda sazonal de pequenos produtores (caso Campina Grande do Sul)** — Secretaria do Desenvolvimento Sustentável do Paraná: <https://www.sedest.pr.gov.br/Noticia/No-Parana-pinhao-gera-renda-para-pequenos-produtores>
-- **Status de conservação da *Araucaria angustifolia*** — União Internacional para a Conservação da Natureza (IUCN) Red List; Fundação Grupo Boticário: <https://fundacaogrupoboticario.org.br/ameacada-floresta-com-araucarias-ainda-e-motivo-de-preocupacao/>
-- **Remanescentes da Floresta com Araucárias no Paraná** — cobertura de aproximadamente 0,4% da área original, reportagem da Mongabay Brasil: <https://brasil.mongabay.com/2022/03/araucarias-em-rota-de-extincao-sao-cortadas-com-aval-dos-orgaos-publicos/>
-- **Instrução Normativa IAT nº 03/2026** — Instituto Água e Terra (Paraná), período oficial de coleta do pinhão: 15 de abril a 30 de junho.
-- **Política de Garantia de Preços Mínimos para produtos da Sociobiodiversidade (PGPM-Bio)** — Conab / Ministério da Agricultura. Preço mínimo do pinhão: R$ 3,66/kg.
+- **PEVS/IBGE 2021 e 2023** — produção e valor do pinhão: <https://www.ibge.gov.br/estatisticas/economicas/agricultura-e-pecuaria/9105-producao-da-extracao-vegetal-e-da-silvicultura.html>
+- **Caso Elizabeth Guedes / CGS** — Sedest-PR: <https://www.sedest.pr.gov.br/Noticia/No-Parana-pinhao-gera-renda-para-pequenos-produtores>
+- **Conservação da araucária** — IUCN Red List; Fundação Grupo Boticário: <https://fundacaogrupoboticario.org.br/ameacada-floresta-com-araucarias-ainda-e-motivo-de-preocupacao/>
+- **Remanescentes no PR** — Mongabay Brasil: <https://brasil.mongabay.com/2022/03/araucarias-em-rota-de-extincao-sao-cortadas-com-aval-dos-orgaos-publicos/>
+- **IN IAT nº 03/2026** — período oficial de coleta no PR.
+- **PGPM-Bio** — Conab / Ministério da Agricultura; preço mínimo R$ 3,66/kg.
+                                                                                        

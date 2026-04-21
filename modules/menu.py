@@ -1,4 +1,5 @@
 from modules.armazenamento import registrar_armazenamento, verificar_vencimentos
+from modules.arquivo import registrar_log
 from modules.clima import (
     importar_clima_da_api,
     importar_clima_de_arquivo,
@@ -54,6 +55,7 @@ def executar_menu_principal(repositorio, config: dict) -> None:
             print("\n  > Operacao cancelada pelo usuario.")
         except Exception as erro:
             print(f"  > Erro inesperado: {erro}")
+            registrar_log(config["arquivos"]["log_operacoes"], f"ERRO no menu principal opcao={opcao}: {erro}")
         input("\nPressione ENTER para continuar...")
 
 
@@ -132,6 +134,7 @@ def executar_submenu(titulo: str, opcoes: dict, repositorio, config: dict) -> No
             print("\n  > Operacao cancelada pelo usuario.")
         except Exception as erro:
             print(f"  > Erro inesperado: {erro}")
+            registrar_log(config["arquivos"]["log_operacoes"], f"ERRO em '{titulo}' opcao={opcao}: {erro}")
         input("\nPressione ENTER para continuar...")
 
 
